@@ -1,0 +1,73 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Harvey's headache</h1>
+  <p>The goal of Harvey Perlman, the Chancellor of the University of Nebraska-Lincoln (UNL), is to increase UNL enrollment to 30,000 students by the year 2020.  There have only been 25,000+ students once in the University of Nebraska-Lincoln's history.  That happened in 1982 when 25,075 students attended the University of Nebraska-Lincoln.  Take some time to look at the link to the University of Nebraska-Lincoln's <a href="http://news.unl.edu/newsrooms/unltoday/">website</a> and also<a href="https://twitter.com/Harvey_Perlman">"Follow"</a> Harvey Perlman, the Chancellor of the University of Nebraska-Lincoln, on <a href="https://twitter.com/">Twitter</a>.</p>
+<img src="chart2.png" width="80%"/>
+       <div class="table-responsive">
+            <table class="table table-striped">
+             <thead>
+<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Students</th>
+                </tr>
+              </thead>
+              <tbody>
+             {% for row in enrollment %}  
+                <tr>
+                  <td>{{ row.Year|int }}</td>
+                  <td>{{ row.Students|int }}</td>
+                </tr>
+                  {% endfor %}
+                
+                </tbody></table></div>
+<h3></h3><h3>Retention Tracking of First-time, Full-Time Freshmen</h3>
+     <img src="chart4.png" width="80%"/>
+ <div class="table-responsive">
+            <table class="table table-striped">
+             <thead>
+    <tr>
+                  <th>Date</th>
+                  <th>First Year</th>
+                </tr>
+              </thead>
+              <tbody>
+             {% for row in retention %}  
+                <tr>
+                  <td>{{ row.Date|int }}</td>
+                  <td>{{ row.FirstYear }}</td>
+                </tr>
+                  {% endfor %}
+                
+                </tbody></table></div> 
+<div class="row">
+  <div class="col-md-6">
+    <h3>UNL Enrollment since 1967</h3>
+    <p><em></em></p>
+<img src="chart1.png" width="80%"/>
+
+ 
+   
+                </div>
+                 <div class="col-md-6">
+                <h3></h3><h3>Retention Tracking of First-time, Full-Time Freshmen</h3>
+ <img src="chart4.png" width="80%"/>
+       
+       
+
+
+
+   
+      <p>Check out the University of Nebraska-Lincoln's website <a href="http://news.unl.edu/newsrooms/unltoday/">here</a></p>
+<p><a href="https://twitter.com/Harvey_Perlman">"Follow"</a> Harvey Perlman, the Chancellor of the University of Nebraska-Lincoln on <a href="https://twitter.com/">Twitter</a></p>
+  </div>
+  </div>
+
+{% endblock content %}
+
+
+
