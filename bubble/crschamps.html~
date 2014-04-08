@@ -1,0 +1,33 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Conference Regular Season Champions (2013-14 season)</h1>
+
+ 
+   
+
+    <p>Regular Season Conference champions are listed on the bottom half of this page in alphabetical order (A-Z) by school name.</p> 
+   
+<p><strong>The regular season conference champions listed below are in alphabetical order (A-Z) by Conference name:</strong></p>
+    {% for row in T2 %}{% if row.Reg1 %}<p> <strong>{{ row.Reg1 }}</strong> is the {{ row.Conf1 }} regular season champions.</p> {% else %}{% endif %}{% endfor %}
+   
+<p><strong>Here is the list of Regular Season Conference Champions in alphabetical order (A-Z) by school name:</strong></p>
+    {% for row in T2 %}{% if row.Reg2 %}<p> <strong>{{ row.Reg2 }}</strong> is the {{ row.Conf2 }} regular season champions.</p> {% else %}{% endif %}{% endfor %}
+   
+ 
+
+
+
+
+    <p><strong>Why should I even bother to watch the NCAA Tournament?</strong>  The NCAA Tournament is exciting and there are upsets every year.  However, the selection committee sometimes ranks the team with the worse winning percentage higher than the team with a better overall winning percentage.</p>
+   
+     <p><a href="conftourc.html" >Conference Tournament Champions (2013-14 season)</a></p>
+ 
+  <p><a href="shouldnot.html" >Teams who should not be in the NCAA Tournament.</a></p>
+   <p><a href="should.html" >Teams who should be in the NCAA Tournament </a></p>
+  <p><a href="crschamps.html" >Conference Regular Season Champions (2013-14 season)</a></p>
+  <p><a href="index.html" >Home Page</a></p>
+  </div>
+{% endblock content %}
+

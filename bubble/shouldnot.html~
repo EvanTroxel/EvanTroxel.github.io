@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Teams who <strong>SHOULD NOT</strong> be in the NCAA Division 1 Men's Basketball Tournament (2013-14 season)</h1>
+
+<p>The teams in the chart below are teams who would not have made the NCAA Tournament solely based on the Top 64 (or Top 68) overall winning percentages in Division 1 Men's Basketball.  Therefore, these teams SHOULD NOT have been in the NCAA Tournament for that reason alone.  However, all of these teams made it into the NCAA Tournament and here is their overall winning percentages before the start of the NCAA Tournament below.</p>
+<img src="Chart2.png" width="100%" />
+
+<p>The teams in the chart below are teams who would not have made the NCAA Tournament solely based on the Top 64 (or Top 68) overall winning percentages in Division 1 Men's Basketball.  Therefore, these teams SHOULD NOT have been in the NCAA Tournament for that reason alone.  However, all of these teams made it into the NCAA Tournament and here is their overall win totals before the start of the NCAA Tournament below.</p>
+<img src="Chart4.png" width="100%" />
+
+<p><strong>SHOULD NOT HAVE:</strong> Why?  Not good enough overall winning percentage.</p>
+<p>{% for row in Teams %} {% if row.Team13 %} {{ row.Team13 }}</p>{% else %}{% endif %}{% endfor %}
+   
+   
+
+    
+  
+    <p><strong>Why should I even bother to watch the NCAA Tournament?</strong>  The NCAA Tournament is exciting and there are upsets every year.  However, the selection committee sometimes ranks the team with the worse winning percentage higher than the team with a better overall winning percentage.</p>
+  <p><a href="conftourc.html" >Conference Tournament Champions (2013-14 season)</a></p>
+ 
+  <p><a href="shouldnot.html" >Teams who should not be in the NCAA Tournament.</a></p>
+   <p><a href="should.html" >Teams who should be in the NCAA Tournament </a></p>
+  <p><a href="crschamps.html" >Conference Regular Season Champions (2013-14 season)</a></p>
+  <p><a href="index.html" >Home Page</a></p>
+  </div>
+{% endblock content %}

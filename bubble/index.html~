@@ -1,0 +1,63 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Analyzing the "Bubble Teams" of the NCAA Division 1 Men's Basketball Tournament (2013-2014 season)</h1>
+  <p>Created by Evan Troxel.  <a href="https://twitter.com/Evan_Troxel">"Follow" </a>me on <a href="https://twitter.com/">Twitter </a><a href="https://twitter.com/Evan_Troxel">@Evan_Troxel</a></p>
+  <p><strong>NCAA Tournament HISTORY: </strong>Wichita State (34 Wins, 0 Losses) is the <strong>first team</strong> since UNLV in <strong>1991</strong> to go into the tournament undefeated.  Tournament Champions North Carolina Central University (MEAC) and Cal Poly (Big West) are making their first NCAA Division 1 Tournament appearance.  For the second time since 1973, no teams from the state of Indiana are in the tournament. </p>
+<p>Before you look farther at this webpage, I have an obsession with the NCAA Division 1 Men's Basketball Tournament every year.  It's not just who plays who or who gets this or that ranking.  It's basically everything.  I wish the NCAA Selection Committee would get things right (but they DON'T)!  The NCAA Selection Committee cannot seem to get anything right when it comes to the Division 1 NCAA Men's Basketball Tournament, (as far as I'm concerned).</p>  <p>For example, the NCAA Selection Committee puts Spokane, Washington as part of the East Region for a second and third round game!  (Yeah, that makes a lot of sense.  NOT!)  Spokane is in the WESTERN AND/OR NORTHERN United States!  Spokane is definitely not in the eastern part of the United States!</p>
+    <p><strong>Why does overall record matter?</strong>  Overall record matters because to a degree it does say a lot about how good or bad of a team you are.  In some ways, overall record probably could be seen as an average record.</p>
+    <p><strong>Why does conference record matter?</strong>  Conference record matters because if your team is winning many games against a tough opponent, it means your team is at least a good team.  Scoring lots on offense and not giving up a lot of points on defense is a sign of a good (maybe even a great team).</p>
+ <p>So first you will see who the Conference Tournament Champions and Regular Season Conference Champions are for the 2013-14 season and then we will analyze who SHOULD and SHOULD NOT have made the 2013-14 NCAA Division 1 Men's Basketball Tournament.  After that, I will make a case for a handful of teams that they deserve to be in the NCAA Tournament for the 2013-14 season.  At the end of my case for each team, I determine if the team actually deserves to be in the NCAA Tournament.  Finally, there are some charts at the bottom of this webpage about the handful of teams that I make a case for.</p>
+  <p><a href="conftourc.html" >Conference Tournament Champions (2013-14 season)</a></p>
+  <p><strong>Now, let's look at the Regular Season Conference Champions.</strong></p>
+  <p><a href="crschamps.html" >Regular Season Conference Champions (2013-2014 season)</a></p>
+ <p><strong>So what teams SHOULD have got into the NCAA Tournament?  And what teams SHOULD NOT HAVE made it to the NCAA Tournament?</strong></p>
+  <p><a href="shouldnot.html" >Teams who should not be in the NCAA Tournament</a></p>
+   <p><a href="should.html" >Teams who should be in the NCAA Tournament </a></p>
+      <p> <strong>Now, let's look at the overall win-loss records of teams who didn't make the NCAA Tournament: </strong></p>
+
+    {% for row in Teams %}{% if row.Team1 %}<p> <strong>{{ row.Team1 }}</strong> had an overall record of {{ row.Wins1|int }} wins and {{ row.Losses1|int }} losses.</p> {% else %}{% endif %}{% endfor %}
+     <p>The teams listed above are the same teams that are listed below.  What I am trying to do below, is to make a case for a handful of "bubble teams" that deserve to be in the NCAA Tournament (although none of the teams actually made the NCAA Tournament).  I determined that some of the teams actually <strong>SHOULD</strong> have been in the NCAA Tournament because of their overall winning percentage, while other teams had good overall winning percentages but they just simply didn't win enough games and lost too many games (they just weren't <strong>"good enough"</strong>).  The teams listed below are in alphabetical order (A-Z) by school name.</p>
+<p>{% for row in Teams %} {% if row.Team16 %} <strong>{{ row.Team16 }}</strong> <p><strong>Case:</strong> {{ row.Case16 }}</p></p>{% else %}{% endif %}{% endfor %}
+
+
+   <p>The winning percentages shown in the chart below are of teams who did not make it into the 2013-14 NCAA Division 1 Men's Basketball Tournament.  If the 2013-14 NCAA Division 1 Men's Basketball Tournament was solely based on top 64 or top 68 teams winning percentages, Stony Brook and all the teams above it would have gotten into the 2013-14 NCAA Division 1 Men's Basketball Tournament.</p>
+
+<img src="Chart1.png" width="100%" />
+
+<p>Shown in the chart below is the win totals of a handful of teams who did not make it into the 2013-13 NCAA Division 1 Men's Basketball Tournament.   If the 2013-14 NCAA Division 1 Men's Basketball Tournament was solely based on top 64 or top 68 teams winning percentages, Stony Brook and all the teams above it would have gotten into the 2013-14 NCAA Division 1 Men's Basketball Tournament.</p>
+<img src="Chart3.png" width="100%" />
+
+ 
+
+
+
+
+
+
+   
+
+    
+    
+
+   
+
+   
+   
+   
+
+
+
+
+    <p><strong>Why should I even bother to watch the NCAA Tournament?</strong>  The NCAA Tournament is exciting and there are upsets every year.  However, the selection committee sometimes ranks the team with the worse winning percentage higher than the team with a better overall winning percentage.</p>
+    <p><a href="conftourc.html" >Conference Tournament Champions (2013-14 season)</a></p>
+ 
+  <p><a href="shouldnot.html" >Teams who should not be in the NCAA Tournament.</a></p>
+   <p><a href="should.html" >Teams who should be in the NCAA Tournament </a></p>
+  <p><a href="crschamps.html" >Conference Regular Season Champions (2013-14 season)</a></p>
+  <p><a href="index.html" >Home Page</a></p>
+    
+  </div>
+{% endblock content %}
+

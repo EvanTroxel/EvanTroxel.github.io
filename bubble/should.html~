@@ -1,0 +1,34 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>What teams <strong>SHOULD</strong> have got into the NCAA Tournament and what your bracket should (mostly) look like</h1>
+
+ <p><strong>All of these teams below DID make the NCAA Tournament, and they also had the top 64 or 68 overall winning percentages with one exception.  Providence was ranked 70th in overall winning percentage, but they had the same record (winning percentage) as Louisiana-Lafayette, Colorado, and BYU.  All of these teams below made the NCAA Tournament and definitely deserved to be in the NCAA Tournament:</strong></p> <p>{% for row in Teams %} {% if row.Team2 %}  {{ row.Team2 }} has  {{ row.Wins2|int }} Wins and {{ row.Losses2|int }} Losses.</p>{% else %}{% endif %}{% endfor %} 
+<p>*In my opinion, these teams would not have made the NCAA Tournament if they did not win their conference tournament or simply because their overall winning percentage wasn't in the top 36 winning percentages after the 32 conference tournament champions were already determined.</p>
+
+   
+   <p><strong>Teams who qualified for the NCAA Tournament by winning their conference tournament championship and probably wouldn't have got in if they didn't win it:</strong></p><p>{% for row in T2 %} {% if row.Team5 %} {{ row.Team5 }}</p>{% else %}{% endif %}{% endfor %}
+    
+    
+    
+  
+
+    <p><strong>To be objective, this is every team who I think should be in this year's NCAA Tournament.</strong> The teams listed below are teams who got an automatic bid into the NCAA Tournament by winning their conference tournament championship (32 teams) or they got in because of their winning percentage was among the Top 36 remaining teams eligible to get into the Tournament who didn't already qualify for the Tournament.</p> <p>{% for row in Teams %} {% if row.Team17 %} {{ row.Team17 }} has {{ row.Wins17|int }} wins and {{ row.Losses17|int }} losses.</p>{% else %}{% endif %}{% endfor %}
+    <p>*UTEP, Indiana State, Sam Houston State, Dayton, and Towson had the same winning percentage as Stony Brook and Texas, but Stony Brook and Texas were ranked higher so they get into the Tournament and UTEP, Indiana State, Sam Houston State, Dayton, and Towson are the first five who don't get into the Tournament.</p>
+    <p>Although this is obviously not perfect, the rankings for each team in each Region are correct and I tried to make each team most similar with the Region it is a part of geographically.  But this is a pretty good start.  I blame the NCAA Tournament people for naming regions before they are done selecting the teams that they have determined should be in the NCAA Tournament.  They can still name all the cities before the tournament to host tournament games though.  This is <strong>what your bracket SHOULD REALLY LOOK LIKE:</strong></p>
+    <p><strong>East Region</strong></p></p> <p>{% for row in T2 %} {% if row.Rank1 %} {{ row.Rank1|int }} {{ row.East1 }} </p>{% else %}{% endif %}{% endfor %}
+    <p><strong>South Region</strong></p></p> <p>{% for row in T2 %} {% if row.Rank1 %} {{ row.Rank1|int }} {{ row.South1 }} </p>{% else %}{% endif %}{% endfor %}
+    <p><strong>Midwest Region</strong></p><p>{% for row in T2 %} {% if row.Rank1 %} {{ row.Rank1|int }} {{ row.Midwest1 }} </p>{% else %}{% endif %}{% endfor %}
+    <p><strong>West Region</strong></p><p>{% for row in T2 %} {% if row.Rank1 %} {{ row.Rank1|int }} {{ row.West1 }} </p>{% else %}{% endif %}{% endfor %}
+    <p><strong>*The final four teams that will get into the NCAA Tournament in my opinion are: Mount St. Mary's, Albany, Cal Poly, and Texas Southern</strong></p>
+    <p><strong>Why should I even bother to watch the NCAA Tournament?</strong>  The NCAA Tournament is exciting and there are upsets every year.  However, the selection committee sometimes ranks the team with the worse winning percentage higher than the team with a better overall winning percentage.</p>
+    <p><a href="conftourc.html" >Conference Tournament Champions (2013-14 season)</a></p>
+ 
+  <p><a href="shouldnot.html" >Teams who should not be in the NCAA Tournament.</a></p>
+   <p><a href="should.html" >Teams who should be in the NCAA Tournament </a></p>
+  <p><a href="crschamps.html" >Conference Regular Season Champions (2013-14 season)</a></p>
+  <p><a href="index.html" >Home Page</a></p>
+  </div>
+{% endblock content %}
+

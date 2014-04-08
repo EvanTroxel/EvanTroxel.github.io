@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Conference Tournament Champions (NCAA Division 1 Men's Basketball 2013-2014 season)</h1>
+
+
+   
+
+   
+    <p>*For any team in which it indicates it last made the NCAA Division 1 Men's Basketball Tournament in the year "0", that really means it has never made the NCAA Division 1 Men's Basketball Tournament before.  Also, the list below is in alphabetical order (A-Z) by Conference name.</p>
+    <p> {% for row in Teams %}
+    {% if row.Team5 %}
+    <strong>{{ row.Team5 }}</strong> is the 2014 {{ row.ConfChamps5 }} Conference Tournament Champions.  They are making their {{ row.Appearance5 }} appearance in the NCAA Division 1 Men's Basketball Tournament.  The last time they made the NCAA Division 1 Men's Basketball Tournament was in the year {{ row.Lastbid5|int }}.</p>
+    {% else %}
+    {% endif %}
+    {% endfor %}</p>  
+    
+  
+   
+
+   
+
+
+
+   
+    <p><strong>Why should I even bother to watch the NCAA Tournament?</strong>  The NCAA Tournament is exciting and there are upsets every year.  However, the selection committee sometimes ranks the team with the worse winning percentage higher than the team with a better overall winning percentage.</p>
+  
+      <p><a href="conftourc.html" >Conference Tournament Champions (2013-14 season)</a></p>
+ 
+  <p><a href="shouldnot.html" >Teams who should not be in the NCAA Tournament.</a></p>
+   <p><a href="should.html" >Teams who should be in the NCAA Tournament </a></p>
+  <p><a href="crschamps.html" >Conference Regular Season Champions (2013-14 season)</a></p>
+  <p><a href="index.html" >Home Page</a></p>
+  </div>
+{% endblock content %}
+
